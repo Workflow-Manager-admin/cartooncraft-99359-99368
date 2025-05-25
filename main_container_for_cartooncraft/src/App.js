@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import CartoonCraftContainer from './components/CartoonCraftContainer';
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
+              <span className="logo-symbol">🎨</span> CartoonCraft
             </div>
-            <button className="btn">Template Button</button>
+            <button className="btn">My Cartoons</button>
           </div>
         </div>
       </nav>
@@ -18,16 +19,16 @@ function App() {
       <main>
         <div className="container">
           <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
+            <div className="subtitle">AI-Powered Comic Generation</div>
             
-            <h1 className="title">main_container_for_cartooncraft</h1>
+            <h1 className="title">Create Custom Cartoons</h1>
             
             <div className="description">
-              Start building your application.
+              Transform your imagination into cartoons using AI. Enter a prompt or choose from templates to generate personalized cartoon images or comic strips.
             </div>
-            
-            <button className="btn btn-large">Button</button>
           </div>
+          
+          <CartoonCraftContainer />
         </div>
       </main>
     </div>
