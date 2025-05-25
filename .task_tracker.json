@@ -1,0 +1,5 @@
+{
+  "task_description": "{'component_name': 'Main Container for CartoonCraft', 'description': 'Primary container for CartoonCraft implementation: A web application that allows users to generate small custom cartoons based on their requests. Users can input a prompt or select from templates, and the app will create a cartoon image or short comic strip accordingly.', 'framework': 'react', 'platform': 'web'}",
+  "tasks": {},
+  "next_task_id": 1
+}
