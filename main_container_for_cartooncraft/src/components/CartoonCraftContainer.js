@@ -103,6 +103,7 @@ const CartoonCraftContainer = () => {
       <CartoonDisplay 
         isGenerating={isGenerating}
         generatedCartoon={generatedCartoon}
+        progress={progress}
       />
     </div>
   );
