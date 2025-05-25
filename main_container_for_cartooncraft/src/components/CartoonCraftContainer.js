@@ -41,13 +41,32 @@ const CartoonCraftContainer = () => {
   const handleGenerateCartoon = () => {
     // In a real implementation, this would call an API to generate the cartoon
     setIsGenerating(true);
+    setProgress(0);
+    
+    // Simulate progress updates
+    const totalTime = 2000; // Total generation time in ms
+    const updateInterval = 200; // Update progress every 200ms
+    const progressIncrement = 10; // Increase by 10% each interval
+    
+    let currentProgress = 0;
+    const progressTimer = setInterval(() => {
+      if (currentProgress < 90) {
+        currentProgress += progressIncrement;
+        setProgress(currentProgress);
+      }
+    }, updateInterval);
     
     // Mock the API call with a timeout
     setTimeout(() => {
+      clearInterval(progressTimer);
+      setProgress(100);
+      
       // This is where you would handle the API response
-      setGeneratedCartoon('placeholder-for-generated-cartoon');
-      setIsGenerating(false);
-    }, 2000);
+      setTimeout(() => {
+        setGeneratedCartoon('placeholder-for-generated-cartoon');
+        setIsGenerating(false);
+      }, 200); // Short delay after reaching 100% before showing result
+    }, totalTime);
   };
 
   /**
@@ -57,6 +76,7 @@ const CartoonCraftContainer = () => {
     setPrompt('');
     setSelectedTemplate(null);
     setGeneratedCartoon(null);
+    setProgress(0);
   };
 
   return (
