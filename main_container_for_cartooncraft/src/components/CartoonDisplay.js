@@ -20,6 +20,17 @@ const CartoonDisplay = ({ isGenerating, generatedCartoon, progress }) => {
         <div className="loading-indicator">
           <div className="loading-spinner"></div>
           <p>Generating your cartoon...</p>
+          
+          <div className="progress-bar-container">
+            <div 
+              className={`progress-bar ${progress < 100 ? 'progress-bar-animated' : ''}`} 
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+          <div className="progress-text">
+            {progress < 100 ? 'Processing your cartoon...' : 'Almost ready!'}
+            {progress < 100 && ` ${progress}%`}
+          </div>
         </div>
       );
     }
