@@ -7,8 +7,9 @@ import React from 'react';
  * @param {Object} props - Component props
  * @param {boolean} props.isGenerating - Flag indicating if generation is in progress
  * @param {string|null} props.generatedCartoon - URL or data for the generated cartoon
+ * @param {number} props.progress - Current generation progress percentage (0-100)
  */
-const CartoonDisplay = ({ isGenerating, generatedCartoon }) => {
+const CartoonDisplay = ({ isGenerating, generatedCartoon, progress }) => {
   /**
    * Renders the appropriate content based on the current state
    * (placeholder, loading, or generated cartoon)
