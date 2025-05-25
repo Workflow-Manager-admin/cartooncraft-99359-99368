@@ -1,0 +1,191 @@
+/* CartoonCraft Main Container Styles */
+.cartoon-craft-container {
+  background-color: var(--kavia-dark);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 20px;
+}
+
+.cartoon-craft-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cartoon-craft-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.cartoon-craft-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Prompt Input Styles */
+.prompt-input-container {
+  margin-bottom: 30px;
+}
+
+.prompt-input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+  margin-bottom: 15px;
+}
+
+.prompt-input:focus {
+  outline: none;
+  border-color: var(--kavia-orange);
+}
+
+.buttons-row {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+/* Template Selector Styles */
+.template-selector-container {
+  margin-bottom: 30px;
+}
+
+.template-selector-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.template-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.template-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.template-card.selected {
+  border-color: var(--kavia-orange);
+}
+
+.template-card-image {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: var(--kavia-orange);
+  font-size: 2rem;
+}
+
+.template-card-name {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Cartoon Display Styles */
+.cartoon-display-container {
+  margin-top: 30px;
+}
+
+.cartoon-placeholder {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  padding: 30px;
+  text-align: center;
+}
+
+.cartoon-placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--kavia-orange);
+}
+
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid var(--kavia-orange);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Generated Cartoon Styles */
+.generated-cartoon {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.generated-cartoon img {
+  width: 100%;
+  display: block;
+}
+
+.cartoon-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.control-button {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.control-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--kavia-orange);
+}
