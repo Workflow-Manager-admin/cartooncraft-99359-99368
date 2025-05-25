@@ -21,6 +21,9 @@ const CartoonCraftContainer = () => {
   
   // State for the generated cartoon image URL
   const [generatedCartoon, setGeneratedCartoon] = useState(null);
+  
+  // State for tracking generation progress
+  const [progress, setProgress] = useState(0);
 
   // Mock templates data - in a real app this might come from an API
   const templates = [
